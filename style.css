@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.mars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+    color: #254E58;
+}
+.content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.foto {
+    width: 180px;
+    border: 2px solid #112D32;
+    padding: 16px;
+    color: #112D32;
+    font-size: 20px;
+}

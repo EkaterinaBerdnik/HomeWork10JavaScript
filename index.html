@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<h1 class="mars">Фото Марса</h1>  
+<div class="content"></div>
+
+<script src="data.js"></script>
+    <script>
+        const data = JSON.parse(dataInfo);
+
+        data.forEach(element => {
+            const divEl = document.createElement('div');
+            divEl.classList.add('foto');
+            document.querySelector('.content').appendChild(divEl);
+
+            const idEl = document.createElement('p');
+            idEl.classList.add ('id');
+            divEl.appendChild(idEl);
+            idEl.textContent = element.id;
+
+            const solEl = document.createElement('p');
+            solEl.classList.add ('sol');
+            divEl.appendChild(solEl);
+            solEl.textContent = element.sol;
+
+            const imgEl = document.createElement('a');
+            imgEl.classList.add('img');
+            divEl.appendChild(imgEl);
+            imgEl.href = element.img;
+            imgEl.textContent = 'фото Марса';
+
+            const dateEl = document.createElement('p');
+            dateEl.classList.add('date');
+            divEl.appendChild(dateEl);
+            dateEl.textContent = element.date;
+        });
+
+    </script>
+</body>
+</html>
